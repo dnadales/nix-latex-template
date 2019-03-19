@@ -26,6 +26,12 @@ nix-shell --pure --run "make watch"
 Most likely you will need other `LaTeX` packages. These can be added in the
 `default.nix` file.
 
+Note that when adding a new package, it might be necessary to run:
+
+```shell
+nix-shell --pure --run "make clean"
+```
+
 ## Updating the nixpkgs version
 
 Change this [`nix/nixpkgs-src.json`](nix/nixpkgs-src.json) to the desired
