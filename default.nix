@@ -1,10 +1,11 @@
-{ pkgs ? import (import nix/fetch-nixpkgs.nix) {}
+{ sources ? import ./nix/sources.nix # See: https://github.com/nmattia/niv and https://nix.dev/tutorials/towards-reproducibility-pinning-nixpkgs.html#dependency-management-with-niv
+, pkgs ? import sources.nixpkgs {}   # Use the pinned sources.
 }:
 
 with pkgs;
 
 stdenv.mkDerivation {
-  name = "LaTeX-env";
+  name = "mydoc";
   buildInputs = [ (texlive.combine {
                     inherit (texlive)
                       scheme-small
