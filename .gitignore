@@ -247,3 +247,6 @@ TSWLatexianTemp*
 
 # Nix artifacts
 result*
+
+# Files needed by lorri
+.envrc

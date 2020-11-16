@@ -17,7 +17,7 @@ stdenv.mkDerivation {
                       latexmk
                       ;
                   })
-
+                  glibcLocales
                 ];
   src = ./.;
   buildPhase = "make";
