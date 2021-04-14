@@ -3,6 +3,18 @@
 This repository contains instructions and a `nix` setup needed for building
 `LaTeX` documents in a reproducible manner.
 
+## Getting started
+
+In the directory where the LaTeX document can be found run:
+
+```shell
+niv init
+```
+
+After that copy `default.nix` and `Makefile`, and adapt it to your liking. You
+will probably want to change `DOCNAME` in the `Makefile`, and `name` and
+`description` in `default.nix`.
+
 ## Building LaTeX documents
 
 To build the latex document run:
